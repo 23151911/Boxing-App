@@ -1,0 +1,206 @@
+@font-face {
+  font-family: WBC_font;
+  src: url(VTFRedzone-Classic.woff2);
+}
+
+
+
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+/* Add a black background color to the top navigation */
+body{
+  background-color: black;
+}
+
+
+.topnav {
+  background-color: #333;
+  overflow: hidden;
+  margin-top: 0;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 28px 40px;
+  text-decoration: none;
+  font-size: 17px;
+  font-family: WBC_font;
+  
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  background-color: black;
+  overflow-x: hidden;
+}
+
+.hero-image {
+  width: 100vw;
+  height: 1200px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.hero-text {
+  position: absolute;
+  top: 55%;
+  left: 70%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  font-size: 20px;
+  font-family: WBC_font;
+   gap: 24px;
+}
+
+button {
+  background-color: rgb(74, 117, 16);
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  cursor: pointer;
+  font-family: WBC_font;
+  margin-top: 20px;
+  width: 190px;
+  margin-right: 22px;
+  border-radius: 10px;
+}
+
+button:hover{
+  background-color: #ddd;
+  color: black;
+}
+
+.hero-logo{
+  position: absolute;
+  top: 135px;
+  left: 70%;
+  transform: translateX(-50%);
+  width: 450px;
+  height: auto;
+  z-index: 2;
+}
+
+
+.fighter-card{
+  width: 500px;
+  height: 300px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  margin-top: 150px;
+  left: 0;
+}
+
+.card-bg{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+}
+
+.boxer-img{
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 350px;
+  z-index: 2;
+}
+
+.card-text{
+  position: absolute;
+  top: 40px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  z-index: 3;
+  color: white;
+}
+
+.card-text h3{
+  font-size: 25px;
+  color: white;
+  font-family: WBC_font;
+}
+
+.card-text p{
+  font-size: 11px;
+  color: white;
+  font-family: WBC_font;
+}
+
+.card-text button{
+  width: 90px;
+  height: 22px;
+  font-size: 10px; 
+  background-color: green;
+  color: white;
+  border:none;
+  border-radius: 5px;
+}
+
+.cards-container{
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  background-color: rgb(255, 255, 255);
+  padding: 40px 0;
+}
+

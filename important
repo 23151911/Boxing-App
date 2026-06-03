@@ -1,0 +1,12 @@
+{% extends 'base.html'%} 
+{% block content %}
+
+
+{% for boxer in boxers%}
+<p>{{boxer}}</p>
+<img src="{{ url_for('static', filename='images/'+boxer[8]) }}" alt="">
+
+
+
+{% endfor %}
+{% endblock %}

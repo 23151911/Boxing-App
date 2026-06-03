@@ -39,7 +39,10 @@ body{
 .topnav {
   background-color: #333;
   overflow: hidden;
-  margin-top: 0;
+  top: 0;
+  position: sticky;
+  z-index: 9999;
+  display: flex;
 }
 
 /* Style the links inside the navigation bar */
@@ -175,32 +178,55 @@ button:hover{
 }
 
 .card-text h3{
-  font-size: 25px;
+  font-size: 35px;
   color: white;
   font-family: WBC_font;
+  margin-top: -2%;
 }
 
 .card-text p{
-  font-size: 11px;
+  font-size: 15px;
   color: white;
   font-family: WBC_font;
+  margin-top: 1%;
 }
 
 .card-text button{
-  width: 90px;
+  width: 100px;
   height: 22px;
   font-size: 10px; 
   background-color: green;
   color: white;
   border:none;
   border-radius: 5px;
+  text-align: center;
+  display: inline-block;
 }
 
 .cards-container{
   display: flex;
   justify-content: center;
   gap: 30px;
-  background-color: rgb(255, 255, 255);
+  background-color: black;
   padding: 40px 0;
+  margin-top: -10%;
 }
 
+.division-title {
+  background-color: black;
+  padding: 40px 0 20px 0;
+  text-align: center;
+  color: white;
+  font-family: WBC_font;
+  font-size: 55px;
+  margin: 0;
+}
+
+.featured-title{
+  color: white;
+  font-family: WBC_font;
+  font-size: 55px;
+  text-align: center;
+  margin-top: 3%;
+  
+}

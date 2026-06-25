@@ -1,0 +1,25 @@
+
+{% extends 'Home.html' %}
+
+{% block content %}
+
+<h1 class="division-title">{{ division_title }}</h1>
+
+<div class="featured-container">
+
+  {% for boxer in boxers %}
+
+    <div class="featured-card">
+      <img class="featured-img" src="{{ url_for('static', filename='images/' + boxer[8]) }}" alt="boxer image">
+
+      <div class="featured-text">
+        <h3>{{ boxer[2] }}</h3>
+        <p>{{ boxer[3] }}</p>
+      </div>
+    </div>
+
+  {% endfor %}
+
+</div>
+
+{% endblock %}

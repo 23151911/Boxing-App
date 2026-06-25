@@ -1,0 +1,6 @@
+-- database: ./database.db
+
+SELECT * FROM Boxer;
+
+
+SELECT * FROM Boxer WHERE Weight_ID = 1

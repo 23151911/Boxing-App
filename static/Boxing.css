@@ -179,7 +179,7 @@ html, body {
    gap: 24px;
 }
 
-button {
+.button {
   background-color: rgb(74, 117, 16);
   border: none;
   color: white;
@@ -187,16 +187,16 @@ button {
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 14px;
+  font-size: 12px;
   cursor: pointer;
   font-family: WBC_font;
-  margin-top: 20px;
-  width: 190px;
-  margin-right: 22px;
+  margin-top: 10px;
+  width: 150px;
+  margin-right: 18px;
   border-radius: 10px;
 }
 
-button:hover{
+.button:hover{
   background-color: #ddd;
   color: black;
 }
@@ -313,10 +313,13 @@ button:hover{
   padding: 40px 0 70px 0;
 }
 
-.featured-container{
+.featured-container.vertical {
   display: flex;
-  justify-content: center;
-  gap: 50px;
+  justify-content: flex-start;
+  gap: 100px;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 40px;
 }
 
 .featured-card{
@@ -389,9 +392,100 @@ button:hover{
   font-family: WBC_font;
 }
 
+.division-title{
+  color: white;
+  font-family: WBC_font;
+  font-size: 55px;
+  text-align: center;
+  margin: 60px 0 40px 0;
+}
 
+.featured-container.vertical {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 45px;
+  padding: 50px 0;
+  background-color: black;
+}
 
+.division-card{
+  width: 950px;
+  min-height: 260px;
+  background: linear-gradient(90deg, #050505, #111111, #050505);
+  border: 3px solid #04AA6D;
+  border-radius: 22px;
+  box-shadow: 0 0 25px rgba(4, 170, 109, 0.45);
+  display: flex;
+  align-items: center;
+  gap: 46px;
+  padding: 25px 40px;
+  position: relative;
+  overflow: hidden;
+}
 
+.division-image-box{
+  width: 230px;
+  height: 240px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
 
+.division-img{
+  height: 240px;
+  width: auto;
+  object-fit: contain;
+}
 
+.division-info{
+  color: white;
+  font-family: WBC_font;
+  flex: 1;
+}
 
+.division-info h2{
+  font-size: 42px;
+  margin: 0;
+  color: white;
+}
+
+.division-info h3{
+  font-size: 20px;
+  color: #04AA6D;
+  margin: 8px 0 25px 0;
+}
+
+.division-stats{
+  display: flex;
+  gap: 45px;
+  margin: 25px;
+}
+
+.stat-item p{
+  font-size: 13px;
+  color: white;
+  margin: 5px 0 0 0;
+}
+
+.stat-item h4{
+  font-size: 26px;
+  color: white;
+  margin: 5px 0 0 0;
+}
+
+.view-button{
+  display: inline-block;
+  background-color: #04AA6D;
+  color: white;
+  text-decoration: none;
+  font-family: WBC_font;
+  font-size: 14px;
+  padding: 12px 26px;
+  border-radius: 8px;
+}
+
+.view-button:hover{
+  background-color: white;
+  color: black;
+}

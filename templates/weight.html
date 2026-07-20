@@ -5,17 +5,44 @@
 
 <h1 class="division-title">{{ division_title }}</h1>
 
-<div class="featured-container">
+<div class="featured-container vertical">
 
-  {% for boxer in boxers %}
+{% for boxer in boxers %}
+  <div class="division-card">
+    <div class="division-image-box">
+      <img class="division-img" src="{{ url_for('static', filename='images/' + boxer[8]) }}" alt="boxer image">
+    </div>
+      
+    <div class="division-info">
 
-    <div class="featured-card">
-      <img class="featured-img" src="{{ url_for('static', filename='images/' + boxer[8]) }}" alt="boxer image">
+        <h2>{{ boxer[2] }}</h2>
+        <h3>{{ boxer[3] }}</h3>
 
-      <div class="featured-text">
-        <h3>{{ boxer[2] }}</h3>
-        <p>{{ boxer[3] }}</p>
+        <div class="division-stats">
+
+          <div class="stat-item">
+            <p>WINS</p>
+            <h4>{{boxer [5] }}</h4>
+          </div>
+
+          
+          <div class="stat-item">
+            <p>LOSSES</p>
+            <h4>{{boxer [6] }}</h4>
+          </div>
+
+          
+          <div class="stat-item">
+            <p>DOB</p>
+            <h4>{{boxer [4] }}</h4>
+          </div>
+
+        </div>
+        
+        <a class="view-button" href="/fighter/{{ boxer[0] }}">View Fighter</a>
+      
       </div>
+    
     </div>
 
   {% endfor %}

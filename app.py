@@ -78,6 +78,22 @@ def weight(id):
         undefeated_boxers=undefeated_boxers,
         division_title=division_title
     )
-    
+
+
+@app.route("/fighter/<int:id>")
+def fighter(id):
+    boxers = query_db("SELECT * FROM Boxer")
+
+    boxer = None
+
+    for current_boxer in boxers:
+        if int(current_boxer[0]) == id:
+            boxer = current_boxer
+            break
+
+    if boxer is None:
+        return "Fighter not found", 404
+
+    return render_template("fighter.html", boxer=boxer)    
 if __name__ == "__main__":
     app.run(debug=True)

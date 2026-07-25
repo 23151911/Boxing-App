@@ -1,0 +1,70 @@
+{% extends 'Home.html' %}
+
+{% block content %}
+
+<div class="fighter-page">
+    
+    <div class="fighter-profile">
+
+        <div class="fighter-photo-box">
+            <img 
+            class="fighter-photo"
+            src="{{ url_for('static', filename='images/' + boxer[8]) }}" 
+            alt="{{ boxer[2] }}">
+            >
+        </div>
+        <div class="fighter-details">
+
+            <p class="fighter-division">
+                {% if boxer[7]|int == 1%}
+                    LIGHTWEIGHT DIVISION
+                {% elif boxer[7]|int == 2%}
+                    MIDDLEWEIGHT DIVISION
+                {% elif boxer[7]|int == 3%}
+                    HEAVYWEIGHT DIVISION
+                {% endif %}
+            </p>
+            <h1>{{ boxer[2]}}</h1>
+            <h2>{{ boxer[3]}}</h2>
+
+            <div class="fighter-stats">
+                <div class="fighter-stat">
+                    <p>WINS</p>
+                    <h3> {{ boxer[5]}}</h3>
+
+                </div>
+
+                <div class="fighter-stat">
+                    <p>LOSSES</p>
+                    <h3> {{ boxer[6]}}</h3>
+
+                </div>
+
+                <div class="fighter-stat">
+                    <p>HEIGHT</p>
+                    <h3> {{ boxer[9]}}</h3>
+
+                </div>
+
+                <div class="fighter-stat">
+                    <p>REACH</p>
+                    <h3> {{ boxer[10]}}</h3>
+
+                </div>
+                
+            </div>
+
+            <div class="fighter-extra">
+                <p><span>DATE OF BIRTH</span>{{ boxer[4] }}</p>
+                <p><span>STANCE</span>{{ boxer[11] }}</p>
+                <p><span>STYLE</span>{{ boxer[12] }}</p>
+
+            </div>
+
+            <a class="fighter-back-button" href="/weight/{{ boxer [7] }}">
+                BACK TO DIVISION
+            </a>
+        </div>
+    </div>
+</div>
+{% endblock %}

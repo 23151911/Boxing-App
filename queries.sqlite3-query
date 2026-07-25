@@ -5,3 +5,201 @@ SELECT * FROM Boxer;
 
 SELECT * FROM Boxer WHERE Weight_ID = 1
 
+;
+
+INSERT INTO Boxer
+VALUES
+
+(56, 16, 'Gennady Golovkin', 'GGG', '1982-04-08', 42, 2, 2, '56.png', 179, 178, 'Orthodox', 'Pressure puncher'),
+
+(57, 1, 'Jake LaMotta', 'The Raging Bull', '1922-07-10', 83, 19, 2, '57.png', 173, 170, 'Orthodox', 'Pressure fighter'),
+
+(58, 1, 'Roy Jones Jr', 'Captain Hook', '1969-01-16', 66, 10, 2, '58.png', 180, 188, 'Orthodox', 'Speed counterpuncher'),
+
+(59, 14, 'Sergio Martinez', 'Maravilla', '1975-02-21', 57, 3, 2, '59.png', 178, 185, 'Southpaw', 'Counterpuncher'),
+
+(60, 1, 'Thomas Hearns', 'The Hitman', '1958-10-18', 61, 5, 2, '60.png', 185, 198, 'Orthodox', 'Power boxer-puncher'),
+
+(61, 1, 'Harry Greb', 'The Pittsburgh Windmill', '1894-06-06', 108, 8, 2, '61.png', 173, 180, 'Orthodox', 'Swarm fighter'),
+
+(62, 1, 'Stanley Ketchel', 'Michigan Assassin', '1886-09-14', 51, 4, 2, '62.png', 175, 183, 'Orthodox', 'Power puncher'),
+
+(63, 1, 'Mickey Walker', 'Toy Bulldog', '1901-07-13', 94, 19, 2, '63.png', 170, 173, 'Orthodox', 'Pressure fighter'),
+
+(64, 1, 'Freddie Steele', 'Tacoma Assassin', '1912-12-18', 125, 5, 2, '64.png', 178, 180, 'Orthodox', 'Boxer-puncher'),
+
+(65, 1, 'Gene Fullmer', 'Cyclone', '1931-07-21', 55, 6, 2, '65.png', 173, 175, 'Orthodox', 'Pressure fighter'),
+
+(66, 1, 'Carmen Basilio', 'The Upstate Onion Farmer', '1927-04-02', 56, 16, 2, '66.png', 169, 170, 'Orthodox', 'Pressure fighter'),
+
+(67, 1, 'Tony Zale', 'Man of Steel', '1913-05-29', 67, 18, 2, '67.png', 171, 178, 'Orthodox', 'Body puncher'),
+
+(68, 27, 'Marcel Cerdan', 'The Casablanca Clouter', '1916-07-22', 110, 4, 2, '68.png', 170, 173, 'Orthodox', 'Boxer-puncher'),
+
+(69, 30, 'Dick Tiger', 'Tiger', '1929-08-14', 60, 19, 2, '69.png', 173, 180, 'Orthodox', 'Pressure fighter'),
+
+(70, 1, 'Joey Giardello', 'Joey', '1930-07-16', 101, 25, 2, '70.png', 178, 180, 'Orthodox', 'Technical boxer'),
+
+(71, 1, 'Emile Griffith', 'Emile', '1938-02-03', 85, 24, 2, '71.png', 171, 183, 'Orthodox', 'Boxer-puncher'),
+
+(72, 4, 'Nino Benvenuti', 'Nino', '1938-04-26', 82, 7, 2, '72.png', 180, 183, 'Orthodox', 'Technical boxer'),
+
+(73, 4, 'Vito Antuofermo', 'Vito', '1953-02-09', 50, 7, 2, '73.png', 170, 173, 'Orthodox', 'Pressure fighter'),
+
+(74, 3, 'Alan Minter', 'Boom Boom', '1951-08-17', 39, 9, 2, '74.png', 175, 180, 'Southpaw', 'Boxer-puncher'),
+
+(75, 3, 'Chris Eubank', 'Simply The Best', '1966-08-08', 45, 5, 2, '75.png', 178, 185, 'Orthodox', 'Counterpuncher'),
+
+(76, 3, 'Nigel Benn', 'Dark Destroyer', '1964-01-22', 42, 5, 2, '76.png', 177, 185, 'Orthodox', 'Power puncher'),
+
+(77, 1, 'Gerald McClellan', 'G-Man', '1967-10-23', 31, 3, 2, '77.png', 183, 191, 'Orthodox', 'Power puncher'),
+
+(78, 1, 'Julian Jackson', 'The Hawk', '1960-09-12', 55, 6, 2, '78.png', 182, 188, 'Orthodox', 'Knockout puncher'),
+
+(79, 1, 'Iran Barkley', 'The Blade', '1960-05-06', 43, 19, 2, '79.png', 185, 188, 'Orthodox', 'Power puncher'),
+
+(80, 1, 'James Toney', 'Lights Out', '1968-08-24', 77, 10, 2, '80.png', 178, 183, 'Orthodox', 'Defensive counterpuncher'),
+
+(81, 1, 'Michael Nunn', 'Second To Nunn', '1963-04-14', 58, 4, 2, '81.png', 185, 193, 'Southpaw', 'Technical boxer'),
+
+(82, 1, 'Jermain Taylor', 'Bad Intentions', '1978-08-11', 33, 4, 2, '82.png', 185, 188, 'Orthodox', 'Boxer-puncher'),
+
+(83, 1, 'Kelly Pavlik', 'The Ghost', '1982-04-05', 40, 2, 2, '83.png', 189, 191, 'Orthodox', 'Power boxer'),
+
+(84, 10, 'Felix Trinidad', 'Tito', '1973-01-10', 42, 3, 2, '84.png', 180, 183, 'Orthodox', 'Power puncher'),
+
+(85, 10, 'Miguel Cotto', 'Junito', '1980-10-29', 41, 6, 2, '85.png', 170, 170, 'Orthodox', 'Boxer-puncher'),
+
+(86, 1, 'Daniel Jacobs', 'Miracle Man', '1987-02-03', 37, 4, 2, '86.png', 183, 185, 'Orthodox', 'Boxer-puncher'),
+
+(87, 3, 'Billy Joe Saunders', 'Superb', '1989-08-30', 30, 1, 2, '87.png', 180, 180, 'Southpaw', 'Slick boxer'),
+
+(88, 7, 'Dmitry Pirog', 'Grandmaster', '1980-06-27', 20, 0, 2, '88.png', 180, 178, 'Orthodox', 'Technical boxer'),
+
+(89, 23, 'Arthur Abraham', 'King Arthur', '1980-02-20', 47, 6, 2, '89.png', 175, 183, 'Orthodox', 'Power puncher'),
+
+(90, 23, 'Felix Sturm', 'The Fighter', '1979-01-31', 42, 6, 2, '90.png', 181, 185, 'Orthodox', 'Technical boxer'),
+
+(91, 5, 'Andy Lee', 'Irish', '1984-06-11', 35, 3, 2, '91.png', 188, 191, 'Southpaw', 'Counterpuncher'),
+
+(92, 1, 'Peter Quillin', 'Kid Chocolate', '1983-06-22', 34, 2, 2, '92.png', 180, 184, 'Orthodox', 'Boxer-puncher'),
+
+(93, 1, 'Winky Wright', 'Winky', '1971-11-26', 51, 6, 2, '93.png', 179, 183, 'Southpaw', 'Defensive boxer'),
+
+(94, 1, 'Demetrius Andrade', 'Boo Boo', '1988-02-26', 32, 1, 2, '94.png', 185, 187, 'Southpaw', 'Technical boxer'),
+
+(95, 1, 'Jermall Charlo', 'Hit Man', '1990-05-19', 33, 0, 2, '95.png', 183, 187, 'Orthodox', 'Boxer-puncher'),
+
+(96, 25, 'Erislandy Lara', 'The American Dream', '1983-04-11', 30, 3, 2, '96.png', 175, 188, 'Southpaw', 'Counterpuncher'),
+
+(97, 1, 'Caleb Plant', 'Sweethands', '1992-07-08', 22, 2, 2, '97.png', 185, 188, 'Orthodox', 'Technical boxer'),
+
+(98, 1, 'David Benavidez', 'El Bandera Roja', '1996-12-17', 29, 0, 2, '98.png', 188, 189, 'Orthodox', 'Pressure puncher'),
+
+(99, 3, 'Chris Eubank Jr', 'Next Gen', '1989-09-18', 33, 3, 2, '99.png', 180, 184, 'Orthodox', 'Pressure boxer'),
+
+(100, 16, 'Janibek Alimkhanuly', 'Qazaq Style', '1993-04-01', 15, 0, 2, '100.png', 182, 183, 'Southpaw', 'Technical puncher');
+
+
+INSERT INTO Boxer
+VALUES
+
+(101, 1, 'Muhammad Ali', 'The Greatest', '1942-01-17', 56, 5, 3, '101.png', 191, 198, 'Orthodox', 'Outside boxer'),
+
+(102, 1, 'Mike Tyson', 'Iron Mike', '1966-06-30', 50, 6, 3, '102.png', 178, 180, 'Orthodox', 'Peek-a-boo pressure fighter'),
+
+(103, 3, 'Lennox Lewis', 'The Lion', '1965-09-02', 41, 2, 3, '103.png', 196, 213, 'Orthodox', 'Boxer-puncher'),
+
+(104, 1, 'Joe Frazier', 'Smokin Joe', '1944-01-12', 32, 4, 3, '104.png', 182, 185, 'Orthodox', 'Pressure fighter'),
+
+(105, 1, 'George Foreman', 'Big George', '1949-01-10', 76, 5, 3, '105.png', 192, 199, 'Orthodox', 'Power puncher'),
+
+(106, 1, 'Evander Holyfield', 'The Real Deal', '1962-10-19', 44, 10, 3, '106.png', 189, 197, 'Orthodox', 'Boxer-puncher'),
+
+(107, 1, 'Larry Holmes', 'The Easton Assassin', '1949-11-03', 69, 6, 3, '107.png', 191, 206, 'Orthodox', 'Jab-heavy boxer'),
+
+(108, 1, 'Rocky Marciano', 'The Brockton Blockbuster', '1923-09-01', 49, 0, 3, '108.png', 179, 173, 'Orthodox', 'Pressure fighter'),
+
+(109, 15, 'Wladimir Klitschko', 'Dr Steelhammer', '1976-03-25', 64, 5, 3, '109.png', 198, 206, 'Orthodox', 'Outside boxer'),
+
+(110, 1, 'Joe Louis', 'The Brown Bomber', '1914-05-13', 66, 3, 3, '110.png', 188, 193, 'Orthodox', 'Boxer-puncher'),
+
+(111, 15, 'Vitali Klitschko', 'Dr Ironfist', '1971-07-19', 45, 2, 3, '111.png', 201, 203, 'Orthodox', 'Boxer-puncher'),
+
+(112, 3, 'Tyson Fury', 'The Gypsy King', '1988-08-12', 34, 1, 3, '112.png', 206, 216, 'Orthodox', 'Movement boxer'),
+
+(113, 1, 'Deontay Wilder', 'The Bronze Bomber', '1985-10-22', 43, 4, 3, '113.png', 201, 211, 'Orthodox', 'Power puncher'),
+
+(114, 3, 'Anthony Joshua', 'AJ', '1989-10-15', 28, 3, 3, '114.png', 198, 208, 'Orthodox', 'Boxer-puncher'),
+
+(115, 15, 'Oleksandr Usyk', 'The Cat', '1987-01-17', 22, 0, 3, '115.png', 191, 198, 'Southpaw', 'Technical boxer'),
+
+(116, 1, 'Riddick Bowe', 'Big Daddy', '1967-08-10', 43, 1, 3, '116.png', 196, 206, 'Orthodox', 'Boxer-puncher'),
+
+(117, 1, 'Sonny Liston', 'Big Bear', '1932-05-08', 50, 4, 3, '117.png', 185, 213, 'Orthodox', 'Power puncher'),
+
+(118, 1, 'Jack Dempsey', 'The Manassa Mauler', '1895-06-24', 54, 6, 3, '118.png', 185, 196, 'Orthodox', 'Swarm fighter'),
+
+(119, 1, 'Jack Johnson', 'The Galveston Giant', '1878-03-31', 72, 11, 3, '119.png', 184, 188, 'Orthodox', 'Defensive boxer'),
+
+(120, 1, 'Gene Tunney', 'The Fighting Marine', '1897-05-25', 65, 1, 3, '120.png', 183, 196, 'Orthodox', 'Technical boxer'),
+
+(121, 1, 'Jersey Joe Walcott', 'Jersey Joe', '1914-01-31', 51, 18, 3, '121.png', 183, 188, 'Orthodox', 'Counterpuncher'),
+
+(122, 1, 'Ezzard Charles', 'The Cincinnati Cobra', '1921-07-07', 95, 25, 3, '122.png', 183, 185, 'Orthodox', 'Technical boxer'),
+
+(123, 23, 'Max Schmeling', 'The Black Uhlan', '1905-09-28', 56, 10, 3, '123.png', 185, 193, 'Orthodox', 'Counterpuncher'),
+
+(124, 1, 'Max Baer', 'The Livermore Larupper', '1909-02-11', 68, 13, 3, '124.png', 189, 206, 'Orthodox', 'Power puncher'),
+
+(125, 1, 'Floyd Patterson', 'The Gentleman of Boxing', '1935-01-04', 55, 8, 3, '125.png', 183, 180, 'Orthodox', 'Peek-a-boo boxer'),
+
+(126, 32, 'Ingemar Johansson', 'Ingo', '1932-09-22', 26, 2, 3, '126.png', 184, 183, 'Orthodox', 'Power puncher'),
+
+(127, 1, 'Ken Norton', 'The Black Hercules', '1943-08-09', 42, 7, 3, '127.png', 191, 203, 'Orthodox', 'Pressure boxer'),
+
+(128, 1, 'Gerry Cooney', 'Gentleman Gerry', '1956-08-04', 28, 3, 3, '128.png', 198, 206, 'Orthodox', 'Power puncher'),
+
+(129, 1, 'Tommy Morrison', 'The Duke', '1969-01-02', 48, 3, 3, '129.png', 188, 193, 'Orthodox', 'Power puncher'),
+
+(130, 3, 'Frank Bruno', 'True Brit', '1961-11-16', 40, 5, 3, '130.png', 191, 208, 'Orthodox', 'Power boxer'),
+
+(131, 3, 'David Haye', 'The Hayemaker', '1980-10-13', 28, 4, 3, '131.png', 191, 198, 'Orthodox', 'Speed puncher'),
+
+(132, 1, 'Andy Ruiz Jr', 'Destroyer', '1989-09-11', 35, 2, 3, '132.png', 188, 188, 'Orthodox', 'Pressure puncher'),
+
+(133, 24, 'Joseph Parker', 'Lupesoliai Laauli', '1992-01-09', 35, 3, 3, '133.png', 193, 193, 'Orthodox', 'Boxer-puncher'),
+
+(134, 7, 'Alexander Povetkin', 'Russian Vityaz', '1979-09-02', 36, 3, 3, '134.png', 188, 190, 'Orthodox', 'Pressure puncher'),
+
+(135, 7, 'Nikolai Valuev', 'The Russian Giant', '1973-08-21', 50, 2, 3, '135.png', 213, 216, 'Orthodox', 'Outside boxer'),
+
+(136, 1, 'Michael Spinks', 'Jinx', '1956-07-13', 31, 1, 3, '136.png', 188, 193, 'Orthodox', 'Technical boxer'),
+
+(137, 1, 'Hasim Rahman', 'The Rock', '1972-11-07', 50, 9, 3, '137.png', 189, 208, 'Orthodox', 'Power puncher'),
+
+(138, 1, 'Shannon Briggs', 'The Cannon', '1971-12-04', 60, 6, 3, '138.png', 193, 203, 'Orthodox', 'Power puncher'),
+
+(139, 1, 'James J Corbett', 'Gentleman Jim', '1866-09-01', 11, 4, 3, '139.png', 185, 188, 'Orthodox', 'Scientific boxer'),
+
+(140, 1, 'James J Jeffries', 'The Boilermaker', '1875-04-15', 19, 1, 3, '140.png', 184, 191, 'Orthodox', 'Pressure fighter'),
+
+(141, 18, 'Sam Langford', 'The Boston Bonecrusher', '1886-03-04', 178, 30, 3, '141.png', 171, 188, 'Orthodox', 'Power boxer'),
+
+(142, 1, 'Harry Wills', 'The Black Panther', '1889-05-15', 70, 9, 3, '142.png', 188, 196, 'Orthodox', 'Boxer-puncher'),
+
+(143, 1, 'Cleveland Williams', 'Big Cat', '1933-06-30', 80, 13, 3, '143.png', 188, 203, 'Orthodox', 'Power puncher'),
+
+(144, 1, 'Earnie Shavers', 'The Black Destroyer', '1944-08-31', 74, 14, 3, '144.png', 183, 201, 'Orthodox', 'Knockout puncher'),
+
+(145, 1, 'Ron Lyle', 'Ron', '1941-02-12', 43, 7, 3, '145.png', 191, 193, 'Orthodox', 'Power puncher'),
+
+(146, 18, 'George Chuvalo', 'George', '1937-09-12', 73, 18, 3, '146.png', 183, 188, 'Orthodox', 'Durable pressure fighter'),
+
+(147, 6, 'Zhilei Zhang', 'Big Bang', '1983-05-02', 27, 2, 3, '147.png', 198, 203, 'Southpaw', 'Power puncher'),
+
+(148, 25, 'Luis Ortiz', 'King Kong', '1979-03-29', 34, 3, 3, '148.png', 193, 198, 'Southpaw', 'Counterpuncher'),
+
+(149, 37, 'Kubrat Pulev', 'The Cobra', '1981-05-04', 31, 3, 3, '149.png', 194, 202, 'Orthodox', 'Jab-heavy boxer'),
+
+(150, 26, 'Dillian Whyte', 'The Body Snatcher', '1988-04-11', 30, 3, 3, '150.png', 193, 198, 'Orthodox', 'Pressure puncher');

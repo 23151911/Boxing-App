@@ -82,6 +82,7 @@ def weight(id):
 
 @app.route("/fighter/<int:id>")
 def fighter(id):
+
     boxers = query_db("SELECT * FROM Boxer")
 
     boxer = None
@@ -94,6 +95,77 @@ def fighter(id):
     if boxer is None:
         return "Fighter not found", 404
 
-    return render_template("fighter.html", boxer=boxer)    
+    achievements = query_db(
+        "SELECT * FROM Achivements WHERE BoxerID = ? ORDER BY YEAR",
+        (id,)
+    )
+
+    return render_template(
+        "fighter.html",
+        boxer=boxer,
+        achievements=achievements
+    )
+
+
+
+@app.route("/top-tier")
+def top_tier():
+
+    all_boxers = query_db("SELECT * FROM Boxer")
+
+
+    boxer_by_id = {}
+
+    for boxer in all_boxers:
+        boxer_by_id[int(boxer[0])] = boxer
+
+    lightweight_rankings = query_db(
+        "SELECT * FROM Rankings WHERE Weight_ID = 1 ORDER BY Rank"
+    )
+
+    middleweight_rankings = query_db(
+            "SELECT * FROM Rankings WHERE Weight_ID = 2 ORDER BY Rank"
+        )
+    
+    heavyweight_rankings = query_db(
+            "SELECT * FROM Rankings WHERE Weight_ID = 3 ORDER BY Rank"
+        )
+
+
+    lightweight = []
+    middleweight = []
+    heavyweight = []
+
+    for rankings in lightweight_rankings:
+        boxer_id = int(rankings[1])
+
+        if boxer_id in boxer_by_id:
+            lightweight.append(boxer_by_id[boxer_id])
+
+    
+    for rankings in middleweight_rankings:
+        boxer_id = int(rankings[1])
+
+        if boxer_id in boxer_by_id:
+            middleweight.append(boxer_by_id[boxer_id])
+
+    
+    for rankings in heavyweight_rankings:
+        boxer_id = int(rankings[1])
+
+        if boxer_id in boxer_by_id:
+            heavyweight.append(boxer_by_id[boxer_id])
+
+    return render_template(
+        "top-tier.html",
+        lightweight=lightweight,
+        middleweight=middleweight,
+        heavyweight=heavyweight
+    )
+
+
+
 if __name__ == "__main__":
     app.run(debug=True)
+
+    

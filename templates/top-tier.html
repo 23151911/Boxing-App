@@ -1,0 +1,169 @@
+{% extends 'Home.html' %}
+
+{% block content %}
+
+<div class="tier-page">
+    <h1 class="tier-main-title">TOP TIER FIGHTERS</h1>
+
+    <p class="tier-intro">
+        Top 5  fighters from each division
+    </p>
+
+
+    <section class="tier-section">
+
+        <h2 class="tier-division-title">TOP 5 LIGHTWEIGHT</h2>
+
+        <div class="tier-grid">
+            
+            {%for boxer in lightweight%}
+        
+        
+        <div class="tier-card">
+
+            <div class="tier-rank">
+                #{{ loop.index }}
+            </div>
+
+            <div class="tier-image-box">
+                <img 
+                    class="tier-img"
+                    src="{{ url_for('static', filename='images/' + boxer[8]) }}" \
+                    alt="{{ boxer [2] }}">
+            </div>
+
+            <div class="tier-information">
+
+                <h2>{{ boxer [2] }}</h2>
+
+                <h3>{{ boxer [3] }}</h3>
+
+                <div class="tier-record">
+
+                    <div>
+                        <span> WINS</span>
+                        <strong>{{ boxer [5] }}</strong>
+                    </div>
+
+                    <div>
+                        <span> WINS</span>
+                        <strong>{{ boxer [5] }}</strong>
+                    </div>
+
+                </div>
+                <a class="tier-button" href="/fighter/{{ boxer [0] }}">
+                    VIEW FIGHTER
+                </a>
+            </div>
+        </div>
+        {% endfor %}
+            
+        </div>
+    </section>
+
+    <section class="tier-section">
+
+        <h2 class="tier-division-title">TOP 5 MIDDLEWEIGHT</h2>
+
+        <div class="tier-grid">
+            
+            {%for boxer in middleweight%}
+        
+        
+        <div class="tier-card">
+
+            <div class="tier-rank">
+                #{{ loop.index }}
+            </div>
+
+            <div class="tier-image-box">
+                <img 
+                    class="tier-img"
+                    src="{{ url_for('static', filename='images/' + boxer[8]) }}" \
+                    alt="{{ boxer [2] }}">
+            </div>
+
+            <div class="tier-information">
+
+                <h2>{{ boxer [2] }}</h2>
+
+                <h3>{{ boxer [3] }}</h3>
+
+                <div class="tier-record">
+
+                    <div>
+                        <span> WINS</span>
+                        <strong>{{ boxer [5] }}</strong>
+                    </div>
+
+                    <div>
+                        <span> WINS</span>
+                        <strong>{{ boxer [5] }}</strong>
+                    </div>
+
+                </div>
+                <a class="tier-button" href="/fighter/{{ boxer [0] }}">
+                    VIEW FIGHTER
+                </a>
+            </div>
+        </div>
+        {% endfor %}
+            
+        </div>
+    </section>
+
+
+       <section class="tier-section">
+
+        <h2 class="tier-division-title">TOP 5 HEAVYWEIGHT</h2>
+
+        <div class="tier-grid">
+            
+            {%for boxer in heavyweight%}
+        
+        
+        <div class="tier-card">
+
+            <div class="tier-rank">
+                #{{ loop.index }}
+            </div>
+
+            <div class="tier-image-box">
+                <img 
+                    class="tier-img"
+                    src="{{ url_for('static', filename='images/' + boxer[8]) }}" \
+                    alt="{{ boxer [2] }}">
+            </div>
+
+            <div class="tier-information">
+
+                <h2>{{ boxer [2] }}</h2>
+
+                <h3>{{ boxer [3] }}</h3>
+
+                <div class="tier-record">
+
+                    <div>
+                        <span> WINS</span>
+                        <strong>{{ boxer [5] }}</strong>
+                    </div>
+
+                    <div>
+                        <span> WINS</span>
+                        <strong>{{ boxer [5] }}</strong>
+                    </div>
+
+                </div>
+                <a class="tier-button" href="/fighter/{{ boxer [0] }}">
+                    VIEW FIGHTER
+                </a>
+            </div>
+        </div>
+        {% endfor %}
+            
+        </div>
+    </section>
+
+</div>
+
+{% endblock %}

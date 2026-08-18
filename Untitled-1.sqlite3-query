@@ -1,3 +1,5 @@
 -- database: ./database.db
 
-SELECT * FROM Boxer;
+SELECT * FROM Boxer
+ORDER BY `Weight_ID` ASC;
+

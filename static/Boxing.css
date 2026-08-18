@@ -432,20 +432,24 @@ html, body {
   padding: 25px 40px;
   position: relative;
   overflow: hidden;
+  
 }
 
 .division-image-box{
-  width: 230px;
-  height: 240px;
+  width: 260px;
+  height: 280px;
   display: flex;
   justify-content: center;
   align-items: flex-end;
+  overflow: hidden;
 }
 
 .division-img{
   height: 240px;
-  width: auto;
+  width: 270px;
   object-fit: contain;
+  object-position: center bottom;
+  display: block;
 }
 
 .division-info{
@@ -553,9 +557,9 @@ html, body {
 }
 
 .fighter-photo{
-  width: 90%;
-  height: 560px;
-  object-fit: contain;
+  width: 350x;
+  height: 500px;
+  object-fit:inherit;
   object-position: bottom;
 }
 
@@ -646,3 +650,235 @@ html, body {
   background-color: white;
   color: black;
 }
+
+
+.tier-page{
+  min-height: 100vh;
+  background: 
+  radial-gradient(circle at top, rgba(4, 170, 109, 0.18)transparent 35% ),black;
+  padding: 70px;
+  box-sizing: border-box;
+  font-family: WBC_font;
+}
+
+.tier-main-title{
+  color: white;
+  font-size: 60px;
+  text-align: center;
+
+  margin: 15px 0 80px 0;
+}
+
+.tier-intro{
+  color: #04AA6D;
+  font-size: 16px;
+  text-align: center;
+
+  margin: 15px 0 80px 0;
+}
+.tier-section{
+  max-width: 1500px;
+  margin: 0 auto 100px auto;
+
+}
+
+.tier-division-title{
+  color: white;
+  font-size: 40px;
+  text-align: center;
+  margin:0 0 40px 0;
+}
+
+.tier-division-title::after{
+  content: "";
+  display: block;
+  width: 100px;
+  height: 4px;
+
+  background-color: #04AA6D;
+
+  margin: 15px auto 0 auto;
+
+border-radius: 10px;
+}
+
+.tier-grid{
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 30px;
+}
+
+.tier-card{
+  height: 470px;
+  background: linear-gradient(180deg,#171717#080808);
+  border: 2px solid#04AA6D;
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 18pxrgba(4, 170, 109, 0.25);
+  transition: transform 0.3s ease, box-shadow 0.3 ease, border-color 0.3 ease;
+}
+
+.tier-card:hover{
+  transform: translateY(-10px);
+  box-shadow: 0 0 30px rgba(4, 170, 109, 0.7);
+  border-color: white;
+}
+
+.tier-rank{
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  z-index: 5;
+  width: 48px;
+  height: 48px;
+  background-color: #04AA6D;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+}
+
+.tier-image-box{
+  width: 100%;
+  height: 270px;
+  overflow: hidden;
+  display: block;       /* flex not needed anymore */
+}
+
+.tier-image{
+  width: 100%;
+  height: 100%;          /* fill the box completely */
+  object-fit: cover;     /* crop to fill instead of shrinking to fit */
+  object-position: center top;  /* keeps faces in frame */
+  display: block;
+}
+
+.tier-information{
+  height: 200px;
+  padding: 15px 18px;
+  text-align: center;
+  box-sizing: border-box;
+  color: white;
+}
+
+.tier-information h2{
+  color: white;
+  font-size: 20px;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.tier-card:hover .tier-image{
+  transform: scale(1.06);
+}
+
+.tier-information h3{
+  color: #04AA6D;
+  font-size: 13px;
+  margin: 7px 0 15px 0;
+  min-height: 16px;
+}
+
+.tier-record{
+  display: flex;
+  justify-content: center;
+  gap: 35px;
+  margin-bottom: 17px;
+}
+
+.tier-record div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tier-record span{
+  color: #04AA6D;
+  font-size: 10px;
+}
+
+.tier-record strong{
+  color: white;
+  font-size: 20px;
+  margin-top: 4px;
+}
+
+.tier-button{
+  display: inline-block;
+  min-width: 115px;
+  height: 30px;
+  line-height: 30px;
+  padding: 0 15px;
+  background-color: #04AA6D;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 10px;
+  text-align: center;
+}
+
+.tier-button:hover{
+  background-color: white;
+  color: black;
+}
+
+
+.achievement-section > h2{
+  color: #04AA6D;
+  font-size: 24px;
+  margin: 0 0 20px 0;
+}
+
+.achievement-card{
+  background-color: #151515;
+  border-left: 4px solid #04AA6D;
+  border-radius: 8px;
+  padding: 15px 18px;
+  margin-bottom: 12px;
+}
+
+.achievement-top{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.achievement-card h3{
+  color: white;
+  font-size: 17px;
+  margin: 0;
+}
+
+.achievement-year{
+  color: #04AA6D;
+  font-size: 15px;
+}
+
+.achievement-card p{
+  color: #cccccc;
+  font-size: 13px;
+  line-height: 1.5;
+  margin: 10px 0 0 0;
+}
+
+.no-achievement{
+  color: #888;
+  font-size: 14px;
+}
+
+.tier-image {
+    width: auto;
+    height: 230px;
+    max-width: 85%;
+    object-fit: contain;
+    object-position: center bottom;
+    display: block;
+    transform-origin: center bottom;
+}
+

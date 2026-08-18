@@ -1,0 +1,12 @@
+-- database: ./database.db
+
+SELECT * FROM WeightClass;
+
+CREATE TABLE Rankings (
+    RankingsID INTEGER PRIMARY KEY,
+    BoxerID INTEGER,
+    Weight_ID INTEGER,
+    Rank INTEGER,
+    Points INTEGER,
+    LastUpdated TEXT
+);

@@ -118,7 +118,7 @@ body{
 .dropdown-content {
   display: none;
   position: absolute;
-  top: 38xpx;
+  top: 38px;
   left: 0;
   background-color: #333;
   min-width: 170px;
@@ -880,5 +880,384 @@ border-radius: 10px;
     object-position: center bottom;
     display: block;
     transform-origin: center bottom;
+}
+
+.search-page{
+  min-height: 100vh;
+  background-color: black;
+  padding: 60px 40px;
+  box-sizing: border-box;
+  font-family: WBC_font;
+  color: white;
+}
+
+.search-page h1{
+  color: white;
+  font-size: 48px;
+  text-align: center;
+  margin: 0 0 15px 0;
+}
+
+.search-result-text{
+  color: #04AA6D;
+  text-align: center;
+  font-size: 15px;
+  margin-bottom: 40px;
+}
+
+.search-results{
+  width: 900px;
+  max-width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.search-card{
+  width: 100%;
+  min-height: 220px;
+  background: linear-gradient(90deg, #080808, #151515);
+  border: 2px solid #04AA6D;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  gap: 35px;
+  padding: 20px 30px;
+  box-sizing: border-box;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.search-card:hover{
+  transform: translateY(-5px);
+  box-shadow: 0 0 25px rgba(4, 170, 109, 0.6);
+}
+
+.search-image-box{
+  width: 190px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.search-image{
+  width: 170px;
+  height: 190px;
+  object-fit: contain;
+  object-position: center bottom;
+}
+
+.search-info{
+  color: white;
+  flex: 1;
+}
+
+.search-info h2{
+  color: white;
+  font-size: 30px;
+  margin: 0;
+}
+
+.search-info h3{
+  color: #04AA6D;
+  font-size: 17px;
+  margin: 8px 0 20px 0;
+}
+
+.search-info p{
+  color: white;
+  font-size: 15px;
+  margin: 0 0 20px 0;
+}
+
+.search-view-buttton{
+  display: inline-block;
+  background-color: #04AA6D;
+  color: white;
+  text-decoration: none;
+  padding: 11px 22px;
+  border: 8px;
+  font-size: 12px;
+}
+
+.search-view-buttton:hover{
+  background-color: white;
+  color: black;
+}
+
+.search-message{
+  width: 500px;
+  max-width: 90%;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #151515;
+  border: 2px solid #04AA6D;
+  border-radius: 12px;
+  color: white;
+  text-align: center;
+}
+
+html, body{
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+img{
+  max-width: 100%;
+}
+
+@media screen and (min-width: 1600px){
+  .tier-section{
+    max-width: 1500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .search-results{
+    max-width: 1000px;
+  }
+
+  .fighter-profile{
+  max-width: 1200px;
+  }
+}
+
+@media screen and (max-width: 1200px){
+  .tier-grid{
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .division-card{
+    width: 85%;
+  }
+
+  .fighter-profile{
+    width: 90%;
+  }
+
+  .nav-bottom{
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+}
+
+@media screen and (max-width: 900px){
+  .topnav{
+    height: auto;
+  }
+
+  .nav-bottom{
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding-bottom: 20px;
+  }
+
+  .nav-links{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .search-form{
+    width: 90%;
+    justify-content: center;
+  }
+
+  .search-form input{
+    width: 100%;
+    max-width: 300px;
+  }
+  .hero-text{
+    width: 90%;
+    text-align: center;
+  }
+
+  .featured-container.vertical{
+    padding-left: 0;
+    align-items: center;
+  }
+
+  .division-card{
+    width: 85%;
+    flex-direction: column;
+    gap: 20px;
+    padding: 25px;
+    text-align: center;
+  }
+
+  .division-image-box{
+    width: 100%;
+  }
+
+  .division-stats{
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .tier-grid{
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .fighter-profile{
+    flex-direction: column;
+    width: 90%;
+  }
+
+  .fighter-photo-box{
+    width: 100%;
+    min-width: 450px;
+  }
+
+  .fighter-photo{
+    height: 430px;
+  }
+
+  .fighter-details{
+    width: 100%;
+    padding: 35px;
+  }
+
+  .search-card{
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+
+@media screen and (max-width: 600px){
+
+  .brand h1{
+    text-align: center;
+  }
+
+  .nav-links{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-links a{
+    padding: 8px;
+  }
+
+  .hero-text h1{
+    font-size: 30px;
+  }
+
+  .hero-text h2,
+  .hero-text p{
+    font-size: 15px;
+  }
+
+  .button{
+    width: 140px;
+    margin: 5px;
+  }
+
+  .division-title{
+    font-size: 35px;
+    text-align: center;
+  }
+
+  .division-card{
+    width: 90%;
+    padding: 20px 15px;
+  }
+
+  .division-info h2{
+    font-size: 30px;
+  }
+
+  .division-stats{
+    gap: 15px;
+  }
+
+  .tier-page{
+    padding: 40px 15px;
+  }
+
+  .tier-main-title{
+    font-size: 28px;
+  }
+
+  .tier-division-title{
+    font-size: 38px;
+  }
+  
+  .tier-grid{
+    grid-template-columns: 1fr;
+  }
+
+  .tier-card{
+    width: 100%;
+    max-width: 350px;
+    margin: 0 auto;
+  }
+
+  .fighter-page{
+    padding: 30px 10px;
+  }
+
+  .fighter-profile{
+    width: 100%;
+  }
+
+  .fighter-photo-box{
+    min-height: 350px;
+  }
+
+  .fighter-photo{
+    height: 340px;
+  }
+
+  .fighter-details{
+    padding: 25px 18px;
+  }
+
+  .fighter-details h1{
+    font-size: 38px;
+  }
+
+   .fighter-details h2{
+    font-size: 22px;
+  }
+  
+  .fighter-stats{
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .fighter-extra span{
+    width: 130px;
+  }
+
+  .search-page{
+    padding: 40px 15px;
+  }
+
+  .search-page h1{
+    font-size: 35px;
+  }
+
+  .search-results{
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .search-card{
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .search-image-box{
+    width: 100%;
+  }
+
+  .search-info h2{
+    font-size: 25px;
+  }
 }
 

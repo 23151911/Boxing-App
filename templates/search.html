@@ -1,0 +1,66 @@
+{% extends 'Home.html' %}
+
+{% block content %}
+
+<div class="search-page">
+
+    <h1>SEARCH RESULTS</h1>
+
+    {% if search_text %}
+        <p class="search-result-text">
+            Results for "{{ search_text }}"
+        </p>
+    {% endif %}
+
+    {% if boxers %}
+
+        <div class="search-results">
+
+            {% for boxer in boxers %}
+
+                <div class="search-card">
+
+                    <div class="search-image-box">
+
+                        <img
+                            class="search-image"
+                            src="{{ url_for('static', filename='images/' + boxer[8]) }}"
+                            alt="{{ boxer[2] }}"
+                        >
+
+                    </div>
+
+                    <div class="search-info">
+
+                        <h2>{{ boxer[2] }}</h2>
+
+                        <h3>{{ boxer[3] }}</h3>
+
+                        <p>
+                            {{ boxer[5] }} Wins |
+                            {{ boxer[6] }} Losses
+                        </p>
+
+                      <a class="view-button" href="/fighter/{{ boxer[0] }}">
+                        VIEW FIGHTER
+                        </a>
+
+                    </div>
+
+                </div>
+
+            {% endfor %}
+
+        </div>
+
+    {% else %}
+
+        <div class="search-message">
+            No fighters found. Try another name.
+        </div>
+
+    {% endif %}
+
+</div>
+
+{% endblock %}

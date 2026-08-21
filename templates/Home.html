@@ -33,11 +33,22 @@
       </div>
 
       <a href="/top-tier">TopTier fighters</a>
-      <a href="#">Personal Favourites</a>
     </div>
 
     <form class="search-form" action="/search" method="GET">
-      <input type="text" name="q" placeholder="Search boxer">
+      <input 
+          type="text"
+          name="q"
+          list="boxer-options"
+          placeholder="SEARCH BOXER"
+          autocomplete="OFF"
+      >
+
+      <datalist id="boxer-options">
+          {% for boxer in search_boxers %}
+            <option value="{{ boxer[2] }}"></option>
+          {% endfor %}
+      </datalist>
     </form>
 
   </div>

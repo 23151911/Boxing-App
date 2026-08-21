@@ -1,4 +1,4 @@
-from flask import Flask, g, render_template
+from flask import Flask, g, render_template, request
 import sqlite3
 app = Flask(__name__)
 
@@ -163,7 +163,28 @@ def top_tier():
         heavyweight=heavyweight
     )
 
+@app.route("/search")
+def search():
 
+    search_text = request.args.get("q", "").strip()
+
+    if search_text == "":
+        return render_template(
+            "search.html",
+            boxers=[],
+            search_text=""
+        )
+
+    boxers = query_db(
+        "SELECT * FROM Boxer WHERE Name LIKE ? ORDER BY NAME",
+        ("%" + search_text + "%",)
+    )
+
+    return render_template(
+        "search.html",
+        boxers=boxers,
+        search_text=search_text
+    )
 
 if __name__ == "__main__":
     app.run(debug=True)

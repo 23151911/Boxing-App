@@ -123,7 +123,7 @@ def fighter(fighter_id):
     # Send invaild fighter IDs to the custom 404 erreo page
     if boxer is None:
         abort(404)
-    # Retrieve only the achievements that belong to the selected fighter
+    # Retrieve only the achievements that belong to the selected Fighter
     achievements = query_db(
         """
         SELECT AchivementsID, BoxerID, Title, Year, Description

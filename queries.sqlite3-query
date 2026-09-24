@@ -225,7 +225,7 @@ VALUES
 (14, 105, 3, 4, 85, '2026-08-13'),
 (15, 104, 3, 5, 80, '2026-08-13');
 
-INSERT INTO Achivements
+INSERT INTO Achievements
 (AchivementsID, BoxerID, Title, Year, Description)
 VALUES
 (1, 4, 'Undefeated Professional Career', 2017, 'Finished his professional career with a 50-0 record'),
@@ -245,3 +245,12 @@ VALUES
 (13, 103, 'Undisputed Heavyweight Champion', 1999, 'Became undisputed heavyweight champion'),
 (14, 105, 'Oldest Heavyweight Champion', 1994, 'Regained a heavyweight world title at age 45'),
 (15, 104, 'Olympic Gold Medal', 1964, 'Won Olympic heavyweight gold');
+
+ALTER TABLE Achivements  RENAME TO Achievements;
+
+ALTER TABLE "Country table"  RENAME TO Country;
+
+PRAGMA table_info(Boxer);
+
+ALTER TABLE Boxer
+RENAME COLUMN "Boxer_ID " TO Boxer_ID;

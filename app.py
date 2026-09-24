@@ -1,6 +1,6 @@
 """Flask application for the boxing statistics website."""
 import sqlite3
-from flask import Flask, g, render_template, request
+from flask import Flask, g, render_template, request, abort
 app = Flask(__name__)
 
 DATABASE = 'database.db'
@@ -34,7 +34,7 @@ def query_db(query, args=(), one=False):
     return (rv[0] if rv else None) if one else rv
 
 
-#load the main homepage when the user visits the root URL
+# load the main homepage when the user visits the root URL
 @app.route("/")
 def home():
     """Display the homepage."""
@@ -59,7 +59,7 @@ def weight(weight_id):
         (weight_id,)
     )
 
-    #Match each Weight_id to the division name shown on the page
+    # Match each Weight_id to the division name shown on the page
     division_title = {
         1: "Lightweight Division",
         2: "Middleweight Division",
@@ -120,9 +120,9 @@ def fighter(fighter_id):
         if int(current_boxer[0]) == fighter_id:
             boxer = current_boxer
             break
-    # Return a 404 reponse instead of displaying incorrect data for an invalid ID
+    # Send invaild fighter IDs to the custom 404 erreo page
     if boxer is None:
-        return "Fighter not found", 404
+        abort(404)
     # Retrieve only the achievements that belong to the selected fighter
     achievements = query_db(
         """
@@ -161,7 +161,7 @@ def top_tier():
     # Retrieve the rankings sepretely for each weight division
     lightweight_rankings = query_db(
         """
-        SELECT RankingsID, BoxerID Weight_ID, Rank, Points, LastUpdated
+        SELECT RankingsID, BoxerID, Weight_ID, Rank, Points, LastUpdated
         FROM Rankings
         WHERE Weight_ID = 1
         ORDER BY Rank
@@ -170,7 +170,7 @@ def top_tier():
 
     middleweight_rankings = query_db(
         """
-        SELECT RankingsID, BoxerID Weight_ID, Rank, Points, LastUpdated
+        SELECT RankingsID, BoxerID, Weight_ID, Rank, Points, LastUpdated
         FROM Rankings
         WHERE Weight_ID = 2
         ORDER BY Rank
@@ -178,9 +178,9 @@ def top_tier():
         )
     heavyweight_rankings = query_db(
         """
-        SELECT RankingsID, BoxerID Weight_ID, Rank, Points, LastUpdated
+        SELECT RankingsID, BoxerID, Weight_ID, Rank, Points, LastUpdated
         FROM Rankings
-        WHERE Weight_ID = 1
+        WHERE Weight_ID = 3
         ORDER BY Rank
         """
         )
@@ -246,6 +246,11 @@ def search():
         boxers=boxers,
         search_text=search_text
     )
-# Start the FLsk development server when this file is run directly
+# Display the custom 404 page when a requested page cannot be found
+@app.errorhandler(404)
+def page_not_found(_error):
+    """Display a custom page when the requested page does not exist."""
+    return render_template("404.html"), 404
+# Start the Flask development server when this file is run directly
 if __name__ == "__main__":
     app.run(debug=True)

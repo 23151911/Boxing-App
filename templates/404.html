@@ -1,0 +1,13 @@
+{% extends 'home.html' %}
+
+{% block content %}
+<div class="error-page">
+    <h1>404</h1>
+    <h2>PAGE NOT FOUND</h2>\
+    <p>The page or fighter you are looking for could not be found</p>
+
+    <a class="vier-button" href="{{ url_for('home') }}">
+        BACK HOME
+    </a>
+</div>
+{% endblock %}

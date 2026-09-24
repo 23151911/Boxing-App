@@ -1261,3 +1261,26 @@ img{
   }
 }
 
+.error-page{
+  min-height: 80vh;
+  background-color: black;
+  color: white;
+  padding-top: 120px;
+  box-sizing: border-box;
+}
+
+.error-page h1{
+  color: #04AA6D;
+  font-size: 100px;
+  margin: 0;
+}
+
+.error-page h2{
+  font-size: 32px;
+  margin: 10px 0;
+}
+
+.error-page p{
+  font-size: 16px;
+  margin-bottom: 30px;
+}

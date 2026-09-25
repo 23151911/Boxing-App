@@ -745,14 +745,16 @@ border-radius: 10px;
   width: 100%;
   height: 270px;
   overflow: hidden;
-  display: block;       /* flex not needed anymore */
+  display: flex;    
+  justify-content: center;
+  align-items: flex-end;   
 }
 
 .tier-image{
   width: 100%;
-  height: 100%;          /* fill the box completely */
-  object-fit: cover;     /* crop to fill instead of shrinking to fit */
-  object-position: center top;  /* keeps faces in frame */
+  height: 100%;          
+  object-fit: cover;     
+  object-position: center top;  
   display: block;
 }
 
@@ -1110,7 +1112,7 @@ img{
 
   .fighter-photo-box{
     width: 100%;
-    min-width: 450px;
+    min-height: 450px;
   }
 
   .fighter-photo{
